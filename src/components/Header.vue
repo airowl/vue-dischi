@@ -1,8 +1,8 @@
 <template>
     <header>
-        <nav class="navbar navbar-light bg-light">
+        <nav class="navbar">
             <a class="navbar-brand" href="#">
-                <img src="/docs/4.1/assets/brand/bootstrap-solid.svg" width="30" height="30" alt="">
+                <img src="https://www.freepnglogos.com/uploads/spotify-logo-png/spotify-download-logo-30.png" alt="">
             </a>
         </nav>
     </header>
@@ -14,6 +14,18 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
+    header{
+        background-color: #2e3a46;
+        padding: 0 1rem;
 
+        a{
+            width: 4rem;
+
+            img{
+                width: 100%;
+            }
+        }
+
+    }
 </style>
