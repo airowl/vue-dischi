@@ -1,13 +1,18 @@
 <template>
-    <div id="disc-list">
-        <DiskCard 
-        v-for="(element, index) in musicList"
-        :key="index"
-        :image="element.poster"
-        :title="element.title"
-        :author="element.author"
-        :year="element.year"
-        />
+    <div>
+        <div id="disc-list" v-if="musicList">
+            <DiskCard 
+            v-for="(element, index) in musicList"
+            :key="index"
+            :image="element.poster"
+            :title="element.title"
+            :author="element.author"
+            :year="element.year"
+            />
+        </div>
+        <div class="loader position-absolute top-50 start-50 translate-middle" v-else>
+            <h3>Loading...</h3>
+        </div>
     </div>
 </template>
 
@@ -26,7 +31,8 @@ export default {
         }
     },
     created(){
-        this.apiGetMusic()
+        setTimeout(this.apiGetMusic, 10000)
+        
     },
     methods: {
         apiGetMusic(){
