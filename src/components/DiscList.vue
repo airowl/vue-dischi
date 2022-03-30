@@ -11,10 +11,20 @@ export default {
     name: 'discList',
     components: {
         DiskCard
+    },
+    created(){
+
+    },
+    methods: {
+        
     }
 }
 </script>
 
-<style>
-
+<style lang="scss" scoped>
+    div#disc-list{
+        width: 70%;
+        margin: 0 auto;
+        padding: 5rem 0;
+    }
 </style>
