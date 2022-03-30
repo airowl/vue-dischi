@@ -1,15 +1,16 @@
 <template>
     <div id="disk-card">
-        <img src="https://www.onstageweb.com/wp-content/uploads/2018/09/bon-jovi-new-jersey.jpg" alt="">
-        <h5>New Jersey</h5>
-        <p>Bon Jovi</p>
-        <p>1988</p>
+        <img :src="image" alt="">
+        <h5>{{title}}</h5>
+        <p>{{author}}</p>
+        <p>{{year}}</p>
     </div>
 </template>
 
 <script>
 export default {
-    name: 'diskCard'
+    name: 'diskCard',
+    props: ['image', 'title', 'author', 'year']
 }
 </script>
 
@@ -18,7 +19,7 @@ export default {
         background-color: #2e3a46;
         text-align: center;
         width: calc((100% / 5) - 2rem);
-        height: calc((100% / 2) - .5rem);
+        height: calc(100% / 2);
         padding: 1rem;
         margin-bottom: 1rem;
 

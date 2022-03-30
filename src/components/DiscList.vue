@@ -3,6 +3,10 @@
         <DiskCard 
         v-for="(element, index) in musicList"
         :key="index"
+        :image="element.poster"
+        :title="element.title"
+        :author="element.author"
+        :year="element.year"
         />
     </div>
 </template>
