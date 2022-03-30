@@ -19,8 +19,8 @@ export default {
         background-color: #2e3a46;
         text-align: center;
         width: calc((100% / 5) - 2rem);
-        height: calc(100% / 2);
-        padding: 1rem;
+        height: 25rem;
+        padding: 1.5rem;
         margin-bottom: 1rem;
 
         img{

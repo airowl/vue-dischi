@@ -45,9 +45,9 @@ export default {
     div#disc-list{
         width: 70%;
         margin: 0 auto;
-        padding: 5rem 0;
+        padding: 2.3rem 0;
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-evenly;
+        justify-content: space-between;
     }
 </style>
