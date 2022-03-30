@@ -17,9 +17,10 @@ export default {
     div#disk-card{
         background-color: #2e3a46;
         text-align: center;
-        width: calc((100% / 5) - 1rem);
+        width: calc((100% / 5) - 2rem);
         height: calc((100% / 2) - .5rem);
         padding: 1rem;
+        margin-bottom: 1rem;
 
         img{
             width: 100%;
