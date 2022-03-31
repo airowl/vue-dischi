@@ -31,7 +31,7 @@ export default {
         }
     },
     created(){
-        setTimeout(this.apiGetMusic, 10000)
+        setTimeout(this.apiGetMusic, 2000)
         
     },
     methods: {
