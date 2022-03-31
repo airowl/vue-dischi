@@ -25,6 +25,9 @@ export default {
     components: {
         DiskCard
     },
+    props: {
+        userGenreSelected: String
+    },
     data: function(){
         return {
             musicList: null
@@ -32,7 +35,6 @@ export default {
     },
     created(){
         setTimeout(this.apiGetMusic, 2000)
-        
     },
     methods: {
         apiGetMusic(){
@@ -41,7 +43,6 @@ export default {
                 this.musicList = result.data.response;
             })
         }
-        
     }
 }
 </script>

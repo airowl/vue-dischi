@@ -3,7 +3,7 @@
     <Header @genre="genreSelected"/>
     <main>
       <DiscList 
-        
+        :userGenreSelected="genreSelectedByUser"
       />
     </main>
   </div>
@@ -22,7 +22,7 @@ export default {
   },
   data: function(){
     return{
-      genreSelectedByUser: '',
+      genreSelectedByUser: undefined,
     }
   },
   methods: {
