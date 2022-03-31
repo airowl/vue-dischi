@@ -1,8 +1,10 @@
 <template>
   <div id="app">
-    <Header @filter="filterGenre"/>
+    <Header @genre="genreSelected"/>
     <main>
-      <DiscList />
+      <DiscList 
+        
+      />
     </main>
   </div>
 </template>
@@ -18,9 +20,14 @@ export default {
     Header,
     DiscList
   },
+  data: function(){
+    return{
+      genreSelectedByUser: '',
+    }
+  },
   methods: {
-    filterGenre(selected){
-      console.log(selected);
+    genreSelected(selected){
+      this.genreSelectedByUser = selected;
     }
   }
 }
