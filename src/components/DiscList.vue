@@ -2,7 +2,7 @@
     <div>
         <div id="disc-list" v-if="musicList">
             <DiskCard 
-            v-for="(element, index) in this.filterGenreSelectedByUser"
+            v-for="(element, index) in filterGenreSelectedByUser"
             :key="index"
             :image="element.poster"
             :title="element.title"
@@ -41,13 +41,16 @@ export default {
             axios.get('https://flynn.boolean.careers/exercises/api/array/music')
             .then((result) => {
                 this.musicList = result.data.response;
-            console.log(this.filterGenreSelectedByUser);
-            console.log(this.musicList);
             })
         }
     },
     computed: {
         filterGenreSelectedByUser(){
+
+            if (this.userGenreSelected === undefined) {
+                return this.musicList;
+            }
+
             return this.musicList.filter((element) => {
                 return element.genre.toLowerCase().includes(this.userGenreSelected)
             });
