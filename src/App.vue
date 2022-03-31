@@ -1,7 +1,6 @@
 <template>
   <div id="app">
-    <Header />
-
+    <Header @filter="filterGenre"/>
     <main>
       <DiscList />
     </main>
@@ -18,6 +17,11 @@ export default {
   components: {
     Header,
     DiscList
+  },
+  methods: {
+    filterGenre(selected){
+      console.log(selected);
+    }
   }
 }
 </script>
