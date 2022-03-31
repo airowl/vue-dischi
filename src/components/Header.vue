@@ -6,10 +6,10 @@
             </a>
             <select class="form-select" aria-label="Default select example" v-model="selected">
                 <option value="">Seleziona il Genere</option>
-                <option value="1" @click="$emit('genre', selected)">Rock</option>
-                <option value="2" @click="$emit('genre', selected)">Pop</option>
-                <option value="3" @click="$emit('genre', selected)">Jazz</option>
-                <option value="4" @click="$emit('genre', selected)">Metal</option>
+                <option value="rock" @click="$emit('genre', selected)">Rock</option>
+                <option value="pop" @click="$emit('genre', selected)">Pop</option>
+                <option value="jazz" @click="$emit('genre', selected)">Jazz</option>
+                <option value="metal" @click="$emit('genre', selected)">Metal</option>
             </select>
         </nav>
         <h1 class="text-white">{{selected}}</h1>
