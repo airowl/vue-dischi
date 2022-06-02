@@ -1,5 +1,7 @@
 # vue-dischi
 
+Preview live: https://vue-dischi-boolean.netlify.app/
+
 ## Project setup
 ```
 npm install
